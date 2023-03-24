@@ -115,7 +115,11 @@ const actionDownloadFn = (nameUrl, startChapter, endChapter, speed) => {
     console.log(
       `find out ${
         chaptest - startChapter + 1 > 0 ? chaptest - startChapter + 1 : 0
-      } chap, ${totalImage} images, processing download...`
+      } chap, (${
+        chaptest - startChapter + 1 > 0
+          ? `from ${startChapter} to ${chaptest}`
+          : ""
+      }), ${totalImage} images, processing download...`
     );
 
     // console.log(startChapter, endChapter);

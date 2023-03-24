@@ -35,7 +35,7 @@ btnElement.addEventListener("click", () => {
     // kiểm tra truyện đã tải chưa để nối tiếp lần tải trước
     const data = await chrome.storage.local.get(["objChap"]);
 
-    if (data.objChap[title] !== undefined) {
+    if (data && data.objChap && data.objChap[title] !== undefined) {
       startChapter =
         startChapter < data.objChap[title] + 1
           ? data.objChap[title] + 1
