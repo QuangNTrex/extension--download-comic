@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        background-color: hsl(351, 100%, 94%);
+      }
+      .form {
+        width: 250px;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+      input {
+        width: 100%;
+      }
+      .btn {
+        padding: 2.5rem 0.5rem;
+        border-radius: 50%;
+        border: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      Tải Truyện
+      <h3 class="header"></h3>
+      <form class="form">
+        <input type="text" id="title" name="title" placeholder="Title" />
+        <input
+          type="number"
+          min="0"
+          id="start-chapter"
+          placeholder="Start Chapter"
+        />
+        <input
+          type="number"
+          min="0"
+          id="end-chapter"
+          placeholder="End Chapter"
+        />
+        <input
+          type="number"
+          min="200"
+          id="speed"
+          placeholder="Speed Download(milisecond, min 200ms)"
+        />
+        <button class="btn" id="btn" type="button">Start Download</button>
+      </form>
+      <script src="scripts/popup.js"></script>
+    </div>
+  </body>
+</html>
